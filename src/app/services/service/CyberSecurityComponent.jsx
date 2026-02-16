@@ -148,7 +148,7 @@ export default function CyberSecuritySection() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute top-[40%] z-100 left-[70%] -translate-x-[50%] -translate-y-[50%] w-[210px] sm:w-[100px] md:w-[150px] lg:w-[200px] xl:left-[65%] lg:left-[75%] md:left-[75%]"
+                className="absolute top-[40%] z-0 left-[70%] -translate-x-[65%] -translate-y-[50%] w-[210px] sm:w-[100px] md:w-[150px] lg:w-[200px] xl:left-[65%] lg:left-[75%] md:left-[75%]"
                 style={{ maxWidth: "100%", pointerEvents: "none" }}
               />
             </div>
