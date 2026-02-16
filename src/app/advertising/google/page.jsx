@@ -1,7 +1,16 @@
-import React from 'react'
+import FacebookConsultation from "@/app/components/advertising/Facebook/FacebookConsultation";
+import GoogleAds from "@/app/components/advertising/Google/GoogleAds";
+import GooglePricing from "@/app/components/advertising/Google/GooglePricing";
+import WhatWeDo from "@/app/components/advertising/Google/WhatWeDo";
+import React from "react";
 
-export default function page() {
+export default function Google() {
   return (
-    <div>page</div>
-  )
+    <div>
+      <GoogleAds></GoogleAds>
+      <WhatWeDo></WhatWeDo>
+      <GooglePricing></GooglePricing>
+      <FacebookConsultation></FacebookConsultation>
+    </div>
+  );
 }
