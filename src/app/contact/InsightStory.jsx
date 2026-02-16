@@ -65,7 +65,7 @@ export default function InsightStory() {
         <div className="grid gap-8 lg:grid-cols-3">
           {squad.map((member) => (
             <div key={member.id} className="flex flex-col mt-10">
-              {/* Image wrapper without hover effect */}
+             
               <div className="relative w-full h-105 overflow-hidden rounded-2xl">
                 <Image
                   src={member.image}
