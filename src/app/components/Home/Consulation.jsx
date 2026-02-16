@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import AnimatedButton from "../Shared/AnimatedButton";
+import AnimatedButton from "../shared/AnimatedButton";
 
 export default function ContactForm() {
   return (
