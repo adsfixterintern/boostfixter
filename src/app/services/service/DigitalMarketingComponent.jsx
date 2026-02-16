@@ -124,33 +124,51 @@ export default function DigitalMarketingComponent() {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-9">
             {/* IMAGE SIDE */}
-            <div className="relative flex w-full overflow-hidden rounded-2xl md:justify-start md:col-span-4">
-              <Image
-                alt="Expert"
-                src="/About/Abdul-Kadir.png"
-                width={220}
-                height={220}
-                className="relative w-67.5 sm:w-75 md:w-62.5 lg:w-[320px] rounded-2xl"
-              />
-              {/* Animated Star */}
-              <MotionImage
-                src="/HomePage/Star.png"
-                alt="Star"
-                width={150}
-                height={150}
-                animate={{
-                  x: [0, 5, 0],
-                  y: [0, -5, 0],
-                  rotate: [0, 10, -10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute top-[40%] z-0 left-[70%] -translate-x-[65%] -translate-y-[50%] w-[210px] sm:w-[100px] md:w-[150px] lg:w-[200px] xl:left-[65%] lg:left-[75%] md:left-[75%]"
-                style={{ maxWidth: "100%", pointerEvents: "none" }}
-              />
+
+            <div className="md:col-span-4 flex justify-center md:justify-start">
+              <div className="relative">
+                {/* Main Image (Bigger than before) */}
+                <Image
+                  alt="Expert"
+                  src="/About/Abdul-Kadir.png"
+                  width={220}
+                  height={220}
+                  className="relative w-70 sm:w-85 md:w-80 lg:w-[320px] rounded-2xl"
+                />
+
+                {/*  Animated Star (Also Bigger) */}
+                <MotionImage
+                  src="/HomePage/Star.png"
+                  alt="Star"
+                  width={300}
+                  height={300}
+                  animate={{
+                    y: [0, -8, 0],
+                    rotate: [0, 10, -10, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="
+                                        absolute
+                                        
+                                        /* 📱 Mobile */
+                                        top-[90px] right-[-65px] w-[130px]
+                                    
+                                        /* 📲 Tablet */
+                                        sm:top-[100px] sm:right-[-95px] sm:w-[165px]
+                                    
+                                        /* 💻 Medium */
+                                        md:top-[95px] md:right-[-105px] md:w-[165px]
+                                    
+                                        /* 🖥 Desktop */
+                                        lg:top-[70px] lg:right-[-110px] lg:w-[200px]
+                                      "
+                  style={{ pointerEvents: "none" }}
+                />
+              </div>
             </div>
             {/* TEXT SIDE */}
             <div className="space-y-5 text-center md:text-left md:col-span-5 ">
