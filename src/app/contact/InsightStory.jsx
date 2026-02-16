@@ -24,7 +24,7 @@ const squad = [
     image: "/About/Md-Shobuj-Hosen.png",
     image2: "/About/Md-Shobuj-Hosen-2.png",
     name: "Md Shobuj Hossen",
-    role: "Chef Technical Manager",
+    role: "Cheif Technical Manager",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const squad = [
     image: "/About/Md-Omar-Faruk.png",
     image2: "/About/Md-Omar-Faruk-2.png",
     name: "Md Omar Faruk",
-    role: "Full Stack Developar",
+    role: "Full Stack Developer",
   },
 
   {
@@ -66,7 +66,7 @@ export default function InsightStory() {
           {squad.map((member) => (
             <div key={member.id} className="flex flex-col mt-10">
               {/* Image wrapper without hover effect */}
-              <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
+              <div className="relative w-full h-105 overflow-hidden rounded-2xl">
                 <Image
                   src={member.image}
                   alt={member.name}
