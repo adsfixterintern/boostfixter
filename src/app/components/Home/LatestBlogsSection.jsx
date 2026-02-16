@@ -21,6 +21,7 @@ const cardVariants = {
 export default function LatestBlog() {
   const router=useRouter();
   const [blogs,setBlogs]=useState([]);
+  const [loading,setLoading]=useState(false);
 
 
  useEffect(() => {
