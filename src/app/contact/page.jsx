@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
+import ContactHero from '../components/contact/contactHero'
+import LocationMap from '../components/contact/LocationMap'
 
-const page = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+function page() {
+  return (
+    <div>
+      <ContactHero/>
+      <LocationMap/>
+    </div>
+  )
+}
 
-export default page;
+export default page
