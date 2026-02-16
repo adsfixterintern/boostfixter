@@ -10,8 +10,8 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
-// import CustomButton from "./CustomButton";
-// import AnimatedButton from "./AnimatedButton";
+import CustomButton from "./CustomButton";
+import AnimatedButton from "./AnimatedButton";
 import {
   FaFacebookF,
   FaInstagram,
@@ -21,12 +21,12 @@ import {
 
 export default function Footer() {
   const navLinks = [
-    { label: "About Us", url: "/about" },
-    { label: "Portfolio", url: "/portfolio" },
-    { label: "Our Team", url: "/team" },
-    { label: "Career", url: "/career" },
-    { label: "Blog", url: "/blog" },
-  ];
+  { label: "About Us", url: "/about" },
+  { label: "Portfolio", url: "/portfolio" },
+  { label: "Our Team", url: "/team" },
+  { label: "Career", url: "/career" },
+  { label: "Blog", url: "/blog" },
+];
 
   return (
     <div className="flex flex-col">
@@ -59,7 +59,7 @@ export default function Footer() {
                 performance-driven.
               </p>
               <div className="mt-5 max-w-2/3">
-                <button>Contact Us</button>
+               <AnimatedButton text="Contact Us" scrollToId="freeConsultation"></AnimatedButton>
               </div>
             </div>
 
