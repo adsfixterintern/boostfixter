@@ -148,7 +148,7 @@ export default function VisualCreativeComponent() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute top-[40%] z-100 left-[70%] -translate-x-[50%] -translate-y-[50%] w-52.5 sm:w-25 md:w-37.5 lg:w-50 xl:left-[65%] lg:left-[75%] md:left-[75%]"
+                className="absolute top-[40%] z-0 left-[70%] -translate-x-[65%] -translate-y-[50%] w-52.5 sm:w-25 md:w-37.5 lg:w-50 xl:left-[65%] lg:left-[75%] md:left-[75%]"
                 style={{ maxWidth: "100%", pointerEvents: "none" }}
               />
             </div>
