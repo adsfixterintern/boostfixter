@@ -22,6 +22,7 @@ const CATEGORIES = [
 ];
 const POSTS_PER_PAGE = 6;
 export default function AllBlog() {
+  const router = useRouter();
       const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
