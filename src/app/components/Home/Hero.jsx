@@ -25,7 +25,7 @@ export default function Hero() {
             {/* Buttons */}
             <div  className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row md:justify-start">
               <AnimatedButton id="freeConsultation"  text="Free Consultation" scrollToId="freeConsultation" />
-              <CustomButton text="Portfolio" link="#" />
+              <CustomButton text="Portfolio" link="/portfolio" />
             </div>
           </div>
 

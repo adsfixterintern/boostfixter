@@ -23,10 +23,11 @@ const CATEGORIES = [
 const POSTS_PER_PAGE = 6;
 export default function AllBlog() {
   const router = useRouter();
-      const [blogPosts, setBlogPosts] = useState([]);
+  const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+
     useEffect(() => {
     fetch("/blogs.json")
       .then((res) => res.json())

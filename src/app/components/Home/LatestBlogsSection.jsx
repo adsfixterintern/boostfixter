@@ -3,41 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CustomButton from "../Shared/CustomButton";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
-const blogs = [
-  {
-    author: "Md Millon Hossen",
-    authorRole: "Founder & CEO",
-    date: "October 10, 2024",
-    title: "Optimize Title Tags and Meta Descriptions for Success",
-    image: "/blog/blog1.png",
-    authorImage: "/HomePage/milon.jpg",
-  },
-  {
-    author: "Omor Faruk",
-    authorRole: "Full Stack Developer",
-    date: "October 14, 2024",
-    title: "Minimum Lovable Product From Planning to Execution",
-    image: "/blog/blog2.webp",
-    authorImage: "/HomePage/faruk.jpg",
-  },
-  {
-    author: "Mosaraf Hossen",
-    authorRole: "Full Stack Developer",
-    date: "October 14, 2024",
-    title: "Minimum Lovable Product From Planning to Execution",
-    image: "/blog/blog4.webp",
-    authorImage: "/HomePage/mosaraf.jpg",
-  },
-  {
-    author: "Shaharior Islam",
-    authorRole: "UI/UX Designer",
-    date: "October 16, 2024",
-    title: "UX Metrics What You Should Measure and Why",
-    image: "/blog/blog3.png",
-    authorImage: "/HomePage/shaharior.jpg",
-  },
-];
+
+
 
 const cardVariants = {
   offscreen: { y: 50, opacity: 0 },
@@ -49,6 +19,27 @@ const cardVariants = {
 };
 
 export default function LatestBlog() {
+  const router=useRouter();
+  const [blogs,setBlogs]=useState([]);
+
+
+ useEffect(() => {
+     fetch("/blogs.json")
+       .then((res) => res.json())
+       .then((data) => {
+      setBlogs(data);
+         setLoading(false);
+       })
+       .catch((error) => {
+         console.error("Error loading blogs:", error);
+         setLoading(false);
+       });
+   }, []);
+
+   console.log(blogs)
+   
+const latestBlog = blogs?.slice(0, 4) || [];
+
   return (
     <section className="pt-10 pb-20 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -62,13 +53,14 @@ export default function LatestBlog() {
 
         {/* Blog Cards */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {blogs.map((blog, idx) => (
+          {latestBlog?.map((blog, idx) => (
             <motion.div
               key={idx}
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
+              onClick={() => router.push(`/blog/${blog.id}`)}
               className="relative overflow-hidden bg-[#F8F8F8] transition-all duration-600 rounded-2xl group hover:-translate-y-2"
             >
               {/* Blog Image */}
@@ -81,7 +73,7 @@ export default function LatestBlog() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:opacity-100"></div>
+                <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-linear-to-t from-black/60 via-black/20 to-transparent group-hover:opacity-100"></div>
               </div>
 
               {/* Blog Info */}

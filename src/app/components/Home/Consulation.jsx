@@ -8,8 +8,8 @@ export default function ContactForm() {
         <div className="flex flex-col items-start my-10 rounded-lg md:flex-row ">
           {/* text div - 30% */}
           <div className="mb-6 md:w-[40%] md:mb-0">
-            <h2 className="title">
-              Let's Get <br/> Started
+            <h2 className="title ">
+              Let's Get <br /> Started
             </h2>
             <p className="description">
               Discuss your idea on a call. After <br/> discovery, we'll propose. Once

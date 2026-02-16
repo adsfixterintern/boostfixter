@@ -15,7 +15,7 @@ export default function HomeReviw() {
         {/* 1 card */}
         <div className="bg-[#F8F8F8] p-8">
           <p className="mb-2 text-4xl text-gray-400">01</p>
-          <div className="mt-20">
+          <div className="mt-10 md:mt-20">
             <h3 className="mb-6 text-3xl font-semibold text-gray-400">
               Projects Completed
             </h3>
@@ -28,7 +28,7 @@ export default function HomeReviw() {
         {/* 2 card */}
         <div className="bg-[#F8F8F8] p-8">
           <p className="mb-2 text-4xl text-gray-400">02</p>
-          <div className="mt-20">
+          <div className="mt-10 md:mt-20">
             <h3 className="mb-6 text-3xl font-semibold text-gray-400">
               Happy <br /> Clients
             </h3>
@@ -41,7 +41,7 @@ export default function HomeReviw() {
         {/* 3 card */}
         <div className="bg-[#F8F8F8] p-8">
           <p className="mb-2 text-4xl text-gray-400">03</p>
-          <div className="mt-20">
+          <div className="mt-10 md:mt-20">
             <h3 className="mb-6 text-3xl font-semibold text-gray-400">
               Years of <br /> Services
             </h3>
@@ -54,7 +54,7 @@ export default function HomeReviw() {
         {/* 4 card */}
         <div className="bg-[#F8F8F8] p-8">
           <p className="mb-2 text-4xl text-gray-400">04</p>
-          <div className="mt-20">
+          <div className="mt-10 md:mt-20">
             <h3 className="mb-6 text-3xl font-semibold text-gray-400">
               Team <br /> Members
             </h3>
