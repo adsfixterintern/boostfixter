@@ -10,8 +10,8 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
-import CustomButton from "./CustomButton";
-import AnimatedButton from "./AnimatedButton";
+// import CustomButton from "./CustomButton";
+// import AnimatedButton from "./AnimatedButton";
 import {
   FaFacebookF,
   FaInstagram,
@@ -20,6 +20,18 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+
+  const navLinks = [
+  { label: "About Us", url: "/about" },
+  { label: "Portfolio", url: "/portfolio" },
+  { label: "Our Team", url: "/team" },
+  { label: "Career", url: "/career" },
+  { label: "Blog", url: "/blog" },
+];
+
+
+
+
   return (
     <div className="flex flex-col">
       <footer className="bg-[#F8F8F8] pt-10 pb-4">
@@ -51,7 +63,7 @@ export default function Footer() {
                 performance-driven.
               </p>
               <div className="mt-5 max-w-2/3">
-                <AnimatedButton text="Contact Us" scrollToId="freeConsultation"></AnimatedButton>
+               <button>Contact Us</button>
               </div>
             </div>
 
@@ -61,26 +73,24 @@ export default function Footer() {
                 Quick Links
               </h3>
               <ul className="space-y-1">
-                {["About Us", "Portfolio", "Our Team", "Career", "Blog"].map(
-                  (link) => (
-                    <li key={link}>
-                      <a
-                        href="#"
-                        className=" text-sm           
-    sm:text-base     
-    md:text-lg       
-    font-normal md:font-semibold 
-    text-[#013F32]
-    hover:text-[#031d17]
-    transition-colors duration-300 
-    break-all     "
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  )
-                )}
-              </ul>
+  {navLinks.map((link) => (
+    <li key={link.label}>
+      <a
+        href={link.url}
+        className=" text-sm
+        sm:text-base
+        md:text-lg
+        font-normal md:font-semibold
+        text-[#013F32]
+        hover:text-[#031d17]
+        transition-colors duration-300
+        break-all"
+      >
+        {link.label}
+      </a>
+    </li>
+  ))}
+</ul>
             </div>
 
             {/* Contacts */}

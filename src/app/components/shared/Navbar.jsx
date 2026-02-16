@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import LanguageToggle from "../LanguageToggle";
+
 
 
 export default function Navbar() {
@@ -18,36 +18,31 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     {
       label: "Advertising",
-      href: "/Advertising",
+      href: "/advertising",
       name: "advertising",
       links: [
-        { href: "/Advertising/Facebook", label: "Facebook" },
-        { href: "/Advertising/TikTok", label: "TikTok" },
-        { href: "/Advertising/Google", label: "Google" },
+        { href: "/advertising/facebook", label: "Facebook" },
+        { href: "/advertising/tikTok", label: "TikTok" },
+        { href: "/advertising/google", label: "Google" },
       ],
     },
     {
       label: "Services",
-      href: "/Services",
+      href: "/services",
       name: "services",
-      // links: [
-      //   { href: "/Services/DesignMedia", label: "Design Media" },
-      //   { href: "/Services/webDevelopment", label: "Web Development" },
-      //   { href: "/Services/CyberSecurity", label: "Cyber Security" },
-      // ],
     },
     {
       label: "About Us",
-      href: "/AboutUs",
+      href: "/about",
       name: "about",
        links: [
-      //   { href: "/AboutUs/Portfolio", label: "Portfolio" },
-         { href: "/AboutUs/OurTeam", label: "Our Team" },
-      //   { href: "/AboutUs/PrivacyPolicy", label: "Privacy Policy" },
+     
+         { href: "/about/team", label: "Our Team" },
+     
        ],
     },
     // { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/Contact" },
+    { label: "Contact", href: "/contact" },
      { label: "Blog", href: "/blog" },
   ];
 
@@ -63,7 +58,6 @@ export default function Navbar() {
               className="w-auto h-8"
             />
           </Link>
-       {/* <LanguageToggle></LanguageToggle> */}
           {/* Desktop Menu */}
           <nav className="items-center hidden gap-8 md:flex">
             {navItems.map((item, index) =>
