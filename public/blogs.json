@@ -491,7 +491,7 @@
 
   {
     "id": 17,
-    "image": "/blog/blogs/blog17.png",
+    "image": "/blog/blogs/blog12.png",
      "authorImage": "/About/Md-Mosaraf-Hosen.png",
     "authorName": "Asma Khatun",
     "authorRole": "DevOps Engineer",
@@ -519,8 +519,7 @@
 
   {
     "id": 18,
-    "image": "/blog/blogs/blog18.png",
-     "authorImage": "/About/Md-Mosaraf-Hosen.png",
+    "image": "/blog/blogs/blog11.png", "authorImage": "/About/Md-Mosaraf-Hosen.png",
     "authorName": "Saiful Islam",
     "authorRole": "Graphic Designer",
     "date": "April 20, 2023",
@@ -547,7 +546,7 @@
 
   {
     "id": 19,
-    "image": "/blog/blogs/blog19.png",
+    "image": "/blog/blog1.png",
      "authorImage": "/About/Md-Mosaraf-Hosen.png",
     "authorName": "Nabil Hasan",
     "authorRole": "Cybersecurity Analyst",
@@ -575,8 +574,8 @@
 
   {
     "id": 20,
-    "image": "/blog/blogs/blog20.png",
-    "authorImage": "/About/Nusrat-Jahan.png",
+    "image": "/blog/blog3.png",
+    "authorImage": "/About/Miraz-Hossen.png",
     "authorName": "Nusrat Jahan",
     "authorRole": "UX Designer",
     "date": "February 05, 2023",
