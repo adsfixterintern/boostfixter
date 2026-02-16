@@ -94,7 +94,7 @@ export default function WebDevelopmentComponent() {
 
       {/* -------- Services Grid -------- */}
       <section className="pt-10 md:pb-20">
-        <div className="px-4 mx-auto max-w-7xl">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <div
@@ -105,13 +105,13 @@ export default function WebDevelopmentComponent() {
                   <div className="mb-2 text-3xl text-gray-400">
                     {service.number}
                   </div>
-                  <h3 className="mb-6 text-3xl font-semibold text-gray-400 text-accent">
+                  <h3 className="mb-6 text-xl md:text-3xl font-semibold text-gray-400 text-accent">
                     {service.title}
                   </h3>
                 </div>
                 <div className="mt-4 flex underline items-center gap-1 text-sm font-semibold text-[#00473E] hover:gap-2 transition-all duration-300 cursor-pointer">
                   Details
-                  <ArrowRight className="w-5 h-5 transform -rotate-45deg" />
+                  <ArrowRight className="w-5 h-5 -rotate-45" />
                 </div>
               </div>
             ))}
