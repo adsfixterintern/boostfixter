@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import CustomButton from "./CustomButton";
 
 
 
@@ -41,15 +42,14 @@ export default function Navbar() {
      
        ],
     },
-    // { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
      { label: "Blog", href: "/blog" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-4">
+        <div className="flex items-center  shadow-md px-4 rounded-xl justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <img
@@ -62,10 +62,10 @@ export default function Navbar() {
           <nav className="items-center hidden gap-8 md:flex">
             {navItems.map((item, index) =>
               item.links ? (
-                <div key={index} className="relative group">
+                <div key={index} className="relative  group">
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 font-medium transition text-primary hover:text-accent"
+                    className="flex items-center gap-1 font-medium transition text-[#02644F] hover:text-accent"
                   >
                     {item.label} <ChevronDown size={16} />
                   </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
                       <Link
                         key={i}
                         href={sub.href}
-                        className={`block px-4 py-2 text-primary transition hover:text-accent hover:bg-gray-50 ${
+                        className={`block px-4 py-2 text-[#02644F] transition hover:text-accent hover:bg-gray-50 ${
                           i !== 0 ? "border-t" : ""
                         }`}
                       >
@@ -87,7 +87,7 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={item.href}
-                  className="font-medium transition text-primary hover:text-accent"
+                  className="font-medium transition text-[#02644F] hover:text-accent"
                 >
                   {item.label}
                 </Link>

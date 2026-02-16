@@ -1,0 +1,102 @@
+/* Custom CSS file for animated button with brand colors */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 63, 49, 0.6), 0 0 40px rgba(0, 90, 71, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 63, 49, 0.8), 0 0 60px rgba(0, 90, 71, 0.5);
+  }
+}
+
+.animated-button {
+  position: relative;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 9999px;
+  overflow: hidden;
+  transition: all 0.3s duration;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #003f31 0%, #005a47 100%);
+}
+
+.animated-button-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.animated-button-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(0, 63, 49, 0.6), 0 0 40px rgba(0, 90, 71, 0.3);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animated-button-particle {
+  position: absolute;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background-color: #e7ff24;
+  opacity: 0.8;
+}
+
+.animated-button-particle:nth-child(3) {
+  left: 20%;
+  top: 50%;
+  animation: float 2s ease-in-out infinite;
+}
+
+.animated-button-particle:nth-child(4) {
+  left: 40%;
+  top: 30%;
+  animation: float 2.4s ease-in-out infinite 0.2s;
+}
+
+.animated-button-particle:nth-child(5) {
+  left: 60%;
+  top: 70%;
+  animation: float 2.8s ease-in-out infinite 0.4s;
+}
+
+.animated-button-particle:nth-child(6) {
+  left: 80%;
+  top: 40%;
+  animation: float 2.2s ease-in-out infinite 0.3s;
+}
+
+.animated-button-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
