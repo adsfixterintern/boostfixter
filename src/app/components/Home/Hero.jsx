@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import AnimatedButton from "../Shared/AnimatedButton";
-import CustomButton from "../Shared/CustomButton";
+import AnimatedButton from "../shared/AnimatedButton";
+import CustomButton from "../shared/CustomButton";
 
 export default function Hero() {
 
