@@ -1,17 +1,18 @@
 "use client";
 
-import Career from "@/app/components/about/Career";
-import BoostfixterFamily from "../../../app/components/about/team/BoostFixterFamily";
-import TeamHero from "../../components/about/team/TeamHero";
-import TeamInsights from "../../components/about/team/TeamInsights";
+
+import BoostfixterFamily from "@/app/components/aboutUs/about/BoostfixterFamily";
+import CareerOpportunities from "@/app/components/aboutUs/about/CarrerOppertunities";
+import OurTeamHero from "@/app/components/aboutUs/about/OurTeamHero";
+import TeamInsights from "@/app/components/aboutUs/about/TeamInsights";
 import React from "react";
 
 const OurTeam = () => {
   return (
     <section >
-      <TeamHero></TeamHero>
+      <OurTeamHero></OurTeamHero>
       <BoostfixterFamily></BoostfixterFamily>
-      <Career></Career>
+      <CareerOpportunities></CareerOpportunities>
       <TeamInsights></TeamInsights>
     </section>
   );
