@@ -48,11 +48,6 @@ export default function Navbar() {
     return pathname.startsWith(path);
   };
 
-
-
-
-
-  ///kijijijiji
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-4">
@@ -80,18 +75,27 @@ export default function Navbar() {
                   >
                     {item.label} <ChevronDown size={16} />
                   </Link>
-                  <div className="absolute left-0 invisible mt-2 transition-all duration-200 bg-white border border-gray-100 rounded-lg shadow-lg opacity-0 w-52 group-hover:opacity-100 group-hover:visible">
-                    {item.links.map((sub, i) => (
-                      <Link
-                        key={i}
-                        href={sub.href}
-                        className={`flex items-center gap-1 font-medium transition text-[#02644F] ${
-                          active ? "underline underline-offset-4" : ""
-                        }`}
-                      >
-                        {sub.label}
-                      </Link>
-                    ))}
+
+                  
+           
+                  {/* Desktop Menu */}
+                  <div className="absolute left-0 invisible pt-4 transition-all duration-200 opacity-0 w-52 group-hover:opacity-100 group-hover:visible top-full">
+                    {/* set white bgcolor */}
+                    <div className="bg-white border border-gray-100 rounded-lg shadow-lg overflow-hidden">
+                      {item.links.map((sub, i) => (
+                        <Link
+                          key={i}
+                          href={sub.href}
+                          className={`block px-4 py-3 transition hover:bg-gray-50 hover:text-[#02644F] ${
+                            pathname === sub.href
+                              ? "underline underline-offset-4"
+                              : "text-[#02644F]"
+                          } ${i !== 0 ? "border-t border-gray-50" : ""}`}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ) : (
