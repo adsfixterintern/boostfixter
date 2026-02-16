@@ -186,7 +186,7 @@ export default function AllBlog() {
     <div className="">
       <main className="px-4 py-16 mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <h1 className="pb-4 title">The BoostFixer Blog</h1>
+          <h1 className="pb-4 title">The BoostFixter Blog</h1>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
             {CATEGORIES.map((category) => (
