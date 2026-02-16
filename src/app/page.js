@@ -13,7 +13,7 @@ import ContactForm from "./components/Home/Consulation";
 
 export default function Home() {
   return (
-    <div className="min-h-screen py-4">
+    <div className=" py-4">
      <Hero/>
      <Spotlight/>
      <OurStory/>

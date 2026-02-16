@@ -47,7 +47,7 @@ function Services() {
             Our Services
           </h1>
           <div className="">
-            <CustomButton text="See All Services" link="#" />
+            <CustomButton text="See All Services" link="/services" />
           </div>
         </div>
 

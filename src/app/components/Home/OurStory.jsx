@@ -24,7 +24,7 @@ export default function OurStory() {
                 src={"/HomePage/Ellipse.png"}
                 width={250}
                 height={250}
-                className="relative z-10 w-[150px] sm:w-[180px] md:w-[200px]"
+                className="relative z-10 w-37.5 sm:w-45 md:w-50"
               />
 
               {/* Animated Star */}
@@ -40,7 +40,7 @@ export default function OurStory() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute top-[18%] md:top-[25%] left-[75%] -translate-x-[50%] xl:left-[40%]  md:left-[70%] lg:left-[50%] -translate-y-[50%] w-[130px] sm:w-[100px] md:w-[170px]"
+                className="absolute top-[18%] md:top-[25%] left-[75%] -translate-x-[50%] xl:left-[40%]  md:left-[70%] lg:left-[50%] -translate-y-[50%] w-32.5 sm:w-25 md:w-42.5"
               />
             </div>
           </div>
