@@ -3,13 +3,11 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import CustomButton from "./CustomButton";
-
-
-
-
+import { usePathname } from "next/navigation"; // Use this instead of useRouter
 
 export default function Navbar() {
+  const pathname = usePathname(); // Get the current path
+  console.log("Amar Pathname holo:", pathname);
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -38,36 +36,47 @@ export default function Navbar() {
       label: "About Us",
       href: "/about",
       name: "about",
-       links: [
-     
-         { href: "/about/team", label: "Our Team" },
-     
-       ],
+      links: [{ href: "/about/team", label: "Our Team" }],
     },
     { label: "Contact", href: "/contact" },
-     { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "/blog" },
   ];
 
+  // Helper function to check if link is active
+  const isActive = (path) => {
+    if (path === "/" && pathname !== "/") return false;
+    return pathname.startsWith(path);
+  };
+
+
+
+
+
+  ///kijijijiji
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-4">
-        <div className="flex items-center  shadow-md px-4 rounded-xl justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center shadow-md px-4 rounded-xl justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <img
               src="/BoostFixter_Website.png"
-              alt="BoostFixter Logo"
+              alt="Logo"
               className="w-auto h-8"
             />
           </Link>
+
           {/* Desktop Menu */}
           <nav className="items-center hidden gap-8 md:flex">
-            {navItems.map((item, index) =>
-              item.links ? (
-                <div key={index} className="relative  group">
+            {navItems.map((item, index) => {
+              const active = isActive(item.href);
+
+              return item.links ? (
+                <div key={index} className="relative group">
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 font-medium transition text-[#02644F] hover:text-accent"
+                    className={`flex items-center gap-1 font-medium transition text-[#02644F] ${
+                      active ? "underline underline-offset-4" : ""
+                    }`}
                   >
                     {item.label} <ChevronDown size={16} />
                   </Link>
@@ -76,8 +85,8 @@ export default function Navbar() {
                       <Link
                         key={i}
                         href={sub.href}
-                        className={`block px-4 py-2 text-[#02644F] transition hover:text-accent hover:bg-gray-50 ${
-                          i !== 0 ? "border-t" : ""
+                        className={`flex items-center gap-1 font-medium transition text-[#02644F] ${
+                          active ? "underline underline-offset-4" : ""
                         }`}
                       >
                         {sub.label}
@@ -89,14 +98,15 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={item.href}
-                  className="font-medium transition text-[#02644F] hover:text-accent"
+                  className={`flex items-center gap-1 font-medium transition text-[#02644F] ${
+                    active ? "underline underline-offset-4" : ""
+                  }`}
                 >
                   {item.label}
                 </Link>
-              )
-            )}
+              );
+            })}
           </nav>
-
           {/* Mobile Toggle */}
           <button
             className="text-gray-700 md:hidden"
@@ -104,6 +114,8 @@ export default function Navbar() {
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
+          {/* Mobile button logic remains the same... */}
         </div>
 
         {/* Mobile Menu */}
