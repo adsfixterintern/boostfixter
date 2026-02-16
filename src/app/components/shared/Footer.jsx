@@ -20,7 +20,6 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
-
   const navLinks = [
   { label: "About Us", url: "/about" },
   { label: "Portfolio", url: "/portfolio" },
@@ -70,11 +69,11 @@ export default function Footer() {
                 Quick Links
               </h3>
               <ul className="space-y-1">
-  {navLinks.map((link) => (
-    <li key={link.label}>
-      <a
-        href={link.url}
-        className=" text-sm
+                {navLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.url}
+                      className=" text-sm
         sm:text-base
         md:text-lg
         font-normal md:font-semibold
@@ -82,12 +81,12 @@ export default function Footer() {
         hover:text-[#031d17]
         transition-colors duration-300
         break-all"
-      >
-        {link.label}
-      </a>
-    </li>
-  ))}
-</ul>
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Contacts */}
