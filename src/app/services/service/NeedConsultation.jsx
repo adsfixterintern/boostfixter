@@ -13,7 +13,7 @@ export default function NeedConsultation() {
               Planning <br></br> Something Big?
             </h2>
             <p className="description">
-              Discuss your idea on a call. After discovery, we'll propose a
+              Discuss your idea on a call. After discovery, we&apos;ll propose a
               tailored plan for your project.
             </p>
 

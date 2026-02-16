@@ -130,7 +130,7 @@ export default function DigitalMarketingComponent() {
                 src="/About/Abdul-Kadir.png"
                 width={220}
                 height={220}
-                className="relative w-[270px] sm:w-[300px] md:w-[250px] lg:w-[320px] rounded-2xl"
+                className="relative w-67.5 sm:w-75 md:w-62.5 lg:w-[320px] rounded-2xl"
               />
               {/* Animated Star */}
               <MotionImage

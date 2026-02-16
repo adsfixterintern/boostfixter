@@ -130,7 +130,7 @@ export default function VisualCreativeComponent() {
                 src="/About/Akash-Gharami.png"
                 width={220}
                 height={220}
-                className="relative w-[270px] sm:w-[300px] md:w-[250px] lg:w-[320px] rounded-2xl"
+                className="relative w-67.5 sm:w-75 md:w-62.5 lg:w-[320px] rounded-2xl"
               />
               {/* Animated Star */}
               <MotionImage
@@ -158,8 +158,8 @@ export default function VisualCreativeComponent() {
                 Connect with our Creative Experts Today!
               </h1>
               <p className="description">
-                Have a project in mind? Let's collaborate and create something
-                extraordinary. Reach out to us, and we'll help turn your ideas
+                Have a project in mind? Let&apos;s collaborate and create something
+                extraordinary. Reach out to us, and we&apos;ll help turn your ideas
                 into impactful digital experiences.
               </p>
               <div className="flex justify-center md:justify-start">
